@@ -18,6 +18,8 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseCors();
+
 app.UseAuthorization();
 
 app.MapControllerRoute(
