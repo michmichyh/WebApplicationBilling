@@ -1,11 +1,17 @@
+using WebApplicationBilling.Models.ViewModels;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 //Habilitar el cliente Http
 builder.Services.AddHttpClient();
+<<<<<<< HEAD
 
 
+=======
+builder.services.AddScoped<ICustomerRepository, CustomerRepository>();
+>>>>>>> e38fd5c1820f7e4db809692edc5a6d20094f60f8
 var app = builder.Build();
 
 
