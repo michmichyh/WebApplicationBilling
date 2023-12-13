@@ -1,8 +1,12 @@
+using WebApplicationBilling.Models.ViewModels;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+//Habilitar el cliente Http
+builder.Services.AddHttpClient();
+builder.services.AddScoped<ICustomerRepository, CustomerRepository>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
